@@ -13,8 +13,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:went2/sf-mini-navbar.git"
+    "url": "git+ssh://git@github.com/went2/sf-mini-navbar.git"
   },
   "author": "simon",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/went2/sf-mini-navbar/issues"
+  },
+  "homepage": "https://github.com/went2/sf-mini-navbar#readme"
 }
