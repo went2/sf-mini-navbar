@@ -1,29 +1,40 @@
 # 说明
 
-一个通用的微信顶部的搜索导航条组件，内容与右边的胶囊按钮对齐。
-
-## 内部
-
-会计算设备状态栏高度和按钮位置，保存到设备 localStorage。在实际应用中，这些值作为app.js中的globalData更合理，这里为了抽离出该组件而动用 localStorage。自用尚可。
+一个通用的微信顶部的搜索导航条组件，预留出右侧胶囊的空间。
 
 ## 使用
 
+属性：
+- `title`: string，文字内容，导航栏中间显示的标题文字。传 `slot = 'middle'` 可自定义中间标题位置的内容；
+- `img`：string，图片url，导航栏左侧返回按钮的图片地址，可传可不传，不传会显示默认的返回图片。传 `slot = 'left'` 可自定义左侧返回按钮的位置的内容；
+
+事件:
+- `tap-left`：点击导航栏左侧的返回按钮触发 `tap-left` 事件
+
+示例：
+
 ```
-<nav-search-bar
-  logoImg="../../assets/images/logo/my-music-logo-144.png"
-  title="YT Music"
-  bind:tap-search="onSeachTap"
->
+// 最简单的使用方式
+<nav-bar
+  title="专辑详情"
+  bind:tap-left="onTapLeft">
+</nav-bar>
+
+// 通过 slot 传入自定义内容
+<nav-bar bind:tap-left="onTapNavBack">
+  <view slot="middle">
+    <block wx:for="{{navItems}}" wx:key="item">
+      <view bind:tap="onTapNav">{{item}}</view>
+      <view wx:if="{{ index !== item.length-1 }}">|</view>
+    </block>
+  </view>
+</nav-bar>
 ```
 
-`logoImg`: 导航栏最左边的logo图标，不传则不显示；
+## 发布地址
 
-`title`: logo 旁边的文字描述，不传则不显示；
+npm包地址：`npmjs.com/package/sf-mini-navbar.git`
 
-`bind:tap-search`: 点击搜索图标后会触发 `tap-search` 事件，可在它的事件响应中导航到新页面。
-
-npm包地址：`npmjs.com/package/sf-miniprogram-navbar`
-
-git地址：`git@github.com:went2/sf-miniprogram-navbar.git`
+git地址：`git@github.com:went2/sf-mini-navbar.git`
 
 完。
