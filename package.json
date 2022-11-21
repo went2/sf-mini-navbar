@@ -1,0 +1,20 @@
+{
+  "name": "sf-mini-navbar",
+  "version": "0.0.8",
+  "description": "一个通用的微信小程序顶部导航栏组件",
+  "miniprogram": "src",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wechat mini-program",
+    "customised navigation bar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:went2/sf-mini-navbar.git"
+  },
+  "author": "simon",
+  "license": "MIT"
+}
