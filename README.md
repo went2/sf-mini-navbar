@@ -33,8 +33,6 @@
 
 ## 发布地址
 
-npm包地址：`npmjs.com/package/sf-mini-navbar.git`
+npm包地址：`https://www.npmjs.com/package/sf-mini-navbar`
 
-git地址：`git@github.com:went2/sf-mini-navbar.git`
-
-完。
+git地址：`https://github.com/went2/sf-mini-navbar`
